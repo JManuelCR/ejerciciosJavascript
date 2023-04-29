@@ -38,4 +38,5 @@ concat() -> este metodo CREA UN NUEVO ARRAY concatenando arrays existentes
 flat() -> este metodo CREA UN NUEVO ARRAY reduciendo el array con los sub elementos del array
 slice()
 splice()
+sort()
 
