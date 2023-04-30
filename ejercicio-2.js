@@ -58,3 +58,22 @@ const getNameAndAverage = (kodersList) =>  {
 
 let prueba1 = getNameAndAverage(koders);
 console.log(prueba1);
+
+
+//otra solucion empleando reduce
+const getAverageAndName = kodersList =>{
+    let koderAndAverageList = [];
+    for(let i = 0; i < kodersList.length; i++) {
+        let name = "";
+        let subjetScores = Object.values(kodersList[i].scores);
+        let average = 0;
+        name = kodersList[i].name;
+        average = subjetScores.reduce((sum, score) => sum + score)/ subjetScores.length;
+        koderAndAverageList.push(`El koder ${name} tiene un promedio de ${average}`)         
+    }  
+    return koderAndAverageList;   
+}
+
+let prueba2 = getAverageAndName(koders);
+console.log(prueba2);
+
