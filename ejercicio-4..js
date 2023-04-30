@@ -42,3 +42,34 @@ let mentors = [
     },
   ];
 
+const getGroupSubjectsAverage = kodersList => {
+    let allScores = [];
+    let htmlAverage = [];
+    let cssAverage = [];
+    let jsAverage = [];
+    let bootstrapAverage = [];
+    let globalScores = [];
+
+    kodersList.forEach(scores => {
+        allScores.push(scores.scores)
+    });
+    allScores.forEach(subject => {
+        htmlAverage.push(subject.html)
+        cssAverage.push(subject.css)
+        jsAverage.push(subject.js)
+        bootstrapAverage.push(subject.bootstrap)
+    })
+    let globalHtml = htmlAverage.reduce((sum, score) => sum +score)/htmlAverage.length
+    let globalCss = cssAverage.reduce((sum, score) => sum +score)/cssAverage.length
+    let globalJs = jsAverage.reduce((sum, score) => sum +score)/jsAverage.length
+    let globalBootstrap = bootstrapAverage.reduce((sum, score) => sum +score)/bootstrapAverage.length
+
+    globalScores.push(globalHtml)
+    globalScores.push(globalCss)
+    globalScores.push(globalJs)
+    globalScores.push(globalBootstrap)
+    return globalScores;
+}
+
+let prueba1= getGroupSubjectsAverage(koders);
+console.log(prueba1);
