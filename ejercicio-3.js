@@ -40,3 +40,19 @@
           isGraduated: false,
         },
       ];
+
+      const getGraduatedKoders = kodersList => {
+        let kodersGraduated = [];
+        for(let i=0; i < kodersList.length; i++){
+            if(kodersList[i].isGraduated === false){
+                kodersGraduated.push(koders[i].name)
+            }
+        }
+        return kodersGraduated;
+      }
+
+      let pruebe1 = getGraduatedKoders(koders);
+      console.log(pruebe1);
+
+
+
