@@ -40,6 +40,7 @@ let mentors = [
 /**
  2.- Necesito una lista con los nombres y promedios generales de todos los koders
  */
+
     
  /*
   Con el array koders que contiene objetos, devolver las propiedades name y calcular el promedio de las materia dentro de propiedad scores
